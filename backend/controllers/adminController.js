@@ -1,12 +1,12 @@
 import User from "../models/User.js";
 
-// 👤 GET ALL USERS
+//  GET ALL USERS
 export const getAllUsers = async (req, res) => {
   const users = await User.find();
   res.json(users);
 };
 
-// ❌ DELETE USER
+//  DELETE USER
 export const deleteUserByAdmin = async (req, res) => {
   await User.findByIdAndDelete(req.params.id);
 
